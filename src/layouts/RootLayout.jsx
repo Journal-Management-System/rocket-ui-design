@@ -14,7 +14,6 @@ const RootLayout = () => {
       <main>
         <section id="home"><Home /></section>
         <section id="about"><About /></section>
-        <section id="team"><Team /></section>
         <section id="course"><Course /></section>
         <section id="contact"><Contact /></section>
       </main>

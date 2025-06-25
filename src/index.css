@@ -19,6 +19,28 @@ html {
 }
 
 
+@import "tailwindcss";
+
+
+body{
+    background-color: black;
+    color:white;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+:root {
+  --color-bg: #5459AC;            
+  --color-text: #f3f4f6;           
+  --color-section: #f3f4f6;
+  --color-accent-from: #8E1616;
+  --color-accent-to: #3B82F6;
+   --glass-bg: #5459AC;
+}
+
+
 /* .dark {
   --color-bg: #222831;
   --color-text: #f1f5f9;
@@ -51,4 +73,15 @@ html {
   --color-section: #1f2937;
   --color-accent-from: #305b6b;
   --color-accent-to: #a7d6a4;
+
+ 
+  --glass-bg: rgba(15, 23, 42, 0.4);
+}
+
+
+.nav-glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
 }

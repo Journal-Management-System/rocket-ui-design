@@ -5,7 +5,7 @@ import videoBg from '../assets/backgound2.mp4';
 const Home = () => {
   return (
     <div className="relative h-screen text-white flex items-center justify-center px-4">
-      {/* 🔹 Background Video */}
+      {/* Background Video */}
       <video
         src={videoBg}
         autoPlay
@@ -15,7 +15,7 @@ const Home = () => {
         className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
       />
 
-      {/* 🔸 Foreground Content */}
+      {/*  Foreground Content */}
       <div className="relative z-10 text-center max-w-2xl p-6">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
           From Theory to Therapy – 
