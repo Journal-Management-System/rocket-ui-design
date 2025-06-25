@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../components/Button';
-import videoBg from '../assets/backgound3.mp4'; 
+import videoBg from '../assets/backgound2.mp4'; 
 
 const Home = () => {
   return (
@@ -19,7 +19,7 @@ const Home = () => {
       <div className="relative z-10 text-center max-w-2xl p-6">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
           From Theory to Therapy – 
-          <span className="bg-gradient-to-r from-[#DA4E15] via-[#F25C1F] to-white bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-[var(--color-accent-to)] via-[var(--color-accent-from)] to-white bg-clip-text text-transparent">
             Skill Building Courses
           </span>
         </h1>

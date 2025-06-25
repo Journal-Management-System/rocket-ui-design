@@ -9,18 +9,46 @@ html {
   scroll-behavior: smooth;
 }
 
+
 :root {
-  --color-bg: #fef9f4;
-  --color-text: #111827;
+  --color-bg: #5459AC;            
+  --color-text: #f3f4f6;           
   --color-section: #f3f4f6;
-  --color-accent-from: #7C3AED;
+  --color-accent-from: #8E1616;
   --color-accent-to: #3B82F6;
 }
 
-.dark {
-  --color-bg: black;
+
+/* .dark {
+  --color-bg: #222831;
   --color-text: #f1f5f9;
   --color-section: #1f2937;
-  --color-accent-from: #8b5cf6;
+  --color-accent-from: #393E46;
   --color-accent-to: #2563eb;
+} */
+   
+
+/* 
+.dark {
+  --color-bg: #0f172a;              
+  --color-text: #f1f5f9;                   
+  --color-section: #1e293b;         
+  --color-accent-from: #818cf8;     
+  --color-accent-to: #34d399;       
+} */
+
+/* .dark {
+  --color-bg: #000000;
+  --color-text: #F5F0CD;
+  --color-section: #f3f4f6;
+  --color-accent-from: #8E1616;
+  --color-accent-to:#E8C999;
+} */
+
+.dark {
+  --color-bg: #0f172a;
+  --color-text: #e7f4e7;
+  --color-section: #1f2937;
+  --color-accent-from: #305b6b;
+  --color-accent-to: #a7d6a4;
 }
