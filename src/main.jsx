@@ -1,15 +1,15 @@
-// REACT + TAILWIND ENTRY POINT
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import "./styles/index.css"; // TailwindCSS base styles
 
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './styles/index.css' // ✅ This is your Tailwind CSS file
-import App from './App.jsx' // ✅ Entry component
+// Optional: Enable dark mode if system prefers it
+if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+  document.documentElement.classList.add("dark");
+}
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
     <App />
-  </StrictMode>
-)
-
+  </React.StrictMode>
+);
