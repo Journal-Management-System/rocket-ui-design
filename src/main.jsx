@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./styles/index.css"; // TailwindCSS base styles
+import { FilterProvider } from './hooks/FilterContext';
+import { Profiler } from "react";
 
 // Optional: Enable dark mode if system prefers it
 if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
@@ -9,7 +11,15 @@ if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
 }
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+  // <React.StrictMode>
+<Profiler id="App" onRender={(...args) => console.log(args)}>
+      <FilterProvider>
     <App />
-  </React.StrictMode>
+        
+
+  {/* <App /> */}
+      </FilterProvider>
+</Profiler>
+
+  // </React.StrictMode>
 );
