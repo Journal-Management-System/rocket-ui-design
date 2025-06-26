@@ -1,13 +1,15 @@
-import React from 'react'
+// Button.jsx
+import React from "react";
 
-const Button = () => {
+const Button = ({ button_text, className = "" }) => {
   return (
+    <a
+      href="#apply"
+      className={`bg-gradient-to-r from-[var(--color-accent-from)] to-[var(--color-accent-to)] text-white  rounded-full shadow-lg hover:scale-105 transition-transform duration-300 ${className}`}
+    >
+      {button_text}
+    </a>
+  );
+};
 
-        <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:from-purple-600 hover:to-blue-600 transition-all duration-300 font-medium w-fit">
-          Apply Now
-        </button>
-    
-  )
-}
-
-export default Button
+export default Button;

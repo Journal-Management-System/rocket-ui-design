@@ -9,9 +9,9 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="pr-3 text-xl text-text-light dark:text-text-dark"
+      className="pr-3 "
     >
-      {isDark ? <BsSun /> : <BsMoon />}
+      {isDark ? <BsSun  size={25}/> : <BsMoon  size={25} />}
     </button>
   );
 };

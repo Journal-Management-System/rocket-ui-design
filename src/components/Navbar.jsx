@@ -8,7 +8,7 @@ import Button from "./Button";
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
-  const { theme } = useTheme(); // This is for switching light/dark mode
+  const { theme } = useTheme(); // Access current theme from context
 
   const links = ["about", "course", "contact"]; // Nav links
 
@@ -18,8 +18,15 @@ const Navbar = () => {
   };
 
   // Reusable navigation links
+
   const NavLinks = ({ isMobile = false, onClick }) => (
-    <ul className={`${isMobile ? "space-y-4 border p-10 text-l ] nav-glass" : "hidden md:flex gap-6 "}`}>
+    <ul
+      className={`${
+        isMobile
+          ? "space-y-6 text-2xl font-medium text-[var(--color-text)]"
+          : "hidden md:flex gap-6"
+      }`}
+    >
       {links.map((link) => (
         <li key={link}>
           <Link
@@ -27,29 +34,22 @@ const Navbar = () => {
             smooth
             duration={500}
             offset={-70}
-            className="group relative capitalize cursor-pointer block m-4"
             onClick={onClick}
+            className="capitalize cursor-pointer transition-all border-b-2 border-transparent hover:border-[var(--color-accent-from)]"
+            activeClass="active-nav"
+            spy={true}
           >
             {link}
-            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[var(--color-accent-from)] transition-all duration-300 group-hover:w-full"></span>
           </Link>
         </li>
       ))}
-
-      {/* Theme toggle and Button only on desktop */}
-      {!isMobile && (
-        <li className="flex items-center gap-2">
-          <ThemeToggle />
-          <Button />
-        </li>
-      )}
     </ul>
   );
 
   return (
     <nav
-      className="fixed top-0 left-0 w-full z-50 text-[var(--color-text)]
-        backdrop-blur-md border-b border-white/10 shadow-lg transition-all duration-300
+      className="sticky top-0 left-0 w-full z-50 text-white]
+        backdrop-blur-md border-b border-white shadow-lg transition-all duration-300
         bg-[var(--glass-bg)]"
     >
       <div className="max-w-[1240px] mx-auto px-4 flex justify-between items-center h-20">
@@ -60,21 +60,27 @@ const Navbar = () => {
 
         {/* Mobile menu icon and theme toggle */}
         <div className="md:hidden flex items-center gap-3">
-          <ThemeToggle />
           <button onClick={toggleNav}>
-            {navOpen ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
+            {navOpen ? (
+              <AiOutlineClose size={30} />
+            ) : (
+              <AiOutlineMenu size={30} />
+            )}
           </button>
-          <Button />
         </div>
 
         {/* Desktop navigation */}
         <NavLinks />
+        <ThemeToggle />
+        <Button button_text="Apply Now" className="px-4 py-2"/>
       </div>
 
-      {/* Mobile menu dropdown */}
+      {/* Mobile menu dropdown that pushes content down */}
       {navOpen && (
-        <div className="md:hidden absolute  top-10 left-0  p-6">
-          <NavLinks isMobile={true} onClick={() => setNavOpen(false)} />
+        <div className="md:hidden w-full bg-[var(--color-bg)] backdrop-blur-lg border-b border-white/10 shadow-lg transition-all duration-300">
+          <div className="p-6 flex flex-col items-center">
+            <NavLinks isMobile={true} onClick={() => setNavOpen(false)} />
+          </div>
         </div>
       )}
     </nav>

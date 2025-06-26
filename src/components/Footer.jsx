@@ -3,7 +3,7 @@ import icon from '../assets/icon.png';
 
 const Footer = () => {
   return (
-    <footer className="bg-[var(--color-bg)] text-[var(--color-text)] py-[120px] text-center">
+    <footer className="bg-[var(--glass-bg)] text-white py-[120px] text-center">
       <img src={icon} alt="Rocket Academy Logo" className="w-80 mx-auto" />
 
       <p className="text-sm ">

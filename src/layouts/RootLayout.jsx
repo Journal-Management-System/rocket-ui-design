@@ -1,9 +1,8 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import Home from '../pages/Home';
+import Hero from '../pages/Hero';
 import About from '../pages/About';
-import Team from '../pages/Team';
 import Course from '../pages/Course';
 import Contact from '../pages/Contact';
 
@@ -12,7 +11,7 @@ const RootLayout = () => {
     <div>
       <Navbar />
       <main>
-        <section id="home"><Home /></section>
+        <section id="home"><Hero /></section>
         <section id="about"><About /></section>
         <section id="course"><Course /></section>
         <section id="contact"><Contact /></section>

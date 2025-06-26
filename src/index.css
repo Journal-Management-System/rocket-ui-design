@@ -1,87 +1,44 @@
 @import "tailwindcss";
 
-
 body{
-    background-color: black;
-    color:white;
-}
-html {
-  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #414345, #232526);
+  color: #ffffff;
 }
 
+html {
+ scroll-behavior: smooth;
+}
 
 :root {
-  --color-bg: #5459AC;            
-  --color-text: #f3f4f6;           
-  --color-section: #f3f4f6;
-  --color-accent-from: #8E1616;
-  --color-accent-to: #3B82F6;
+  --color-bg: #ffffff;
+  --color-text: #060707;
+  --color-subtext: #fff;
+  --color-section: #84AE92;
+  --color-accent-from: #71C0BB; /* sky-400 */
+  --color-accent-to: #360cb3;   /* violet-400 */
+  --my-gradient: linear-gradient(90deg, #38bdf8, #a78bfa);
+  --glass-bg: #587774;
+  --site-bg: linear-gradient(180deg, #eef2f3 0%, #e0eafc 100%);
 }
-
-
-@import "tailwindcss";
-
-
-body{
-    background-color: black;
-    color:white;
-}
-html {
-  scroll-behavior: smooth;
-}
-
-
-:root {
-  --color-bg: #5459AC;            
-  --color-text: #f3f4f6;           
-  --color-section: #f3f4f6;
-  --color-accent-from: #8E1616;
-  --color-accent-to: #3B82F6;
-   --glass-bg: #5459AC;
-}
-
-
-/* .dark {
-  --color-bg: #222831;
-  --color-text: #f1f5f9;
-  --color-section: #1f2937;
-  --color-accent-from: #393E46;
-  --color-accent-to: #2563eb;
-} */
-   
-
-/* 
-.dark {
-  --color-bg: #0f172a;              
-  --color-text: #f1f5f9;                   
-  --color-section: #1e293b;         
-  --color-accent-from: #818cf8;     
-  --color-accent-to: #34d399;       
-} */
-
-/* .dark {
-  --color-bg: #000000;
-  --color-text: #F5F0CD;
-  --color-section: #f3f4f6;
-  --color-accent-from: #8E1616;
-  --color-accent-to:#E8C999;
-} */
 
 .dark {
-  --color-bg: #0f172a;
-  --color-text: #e7f4e7;
+  --color-bg: #0b0c10;
+  --color-text: #f9fafb;
+  --color-subtext: #9ca3af;
   --color-section: #1f2937;
-  --color-accent-from: #305b6b;
-  --color-accent-to: #a7d6a4;
-
- 
-  --glass-bg: rgba(15, 23, 42, 0.4);
+  --color-accent-from: #38bdf8;
+  --color-accent-to: #a78bfa;
+  --my-gradient: linear-gradient(90deg, #38bdf8, #a78bfa);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --site-bg: radial-gradient(circle at center, #0f172a, #000000);
 }
 
 
-.nav-glass {
-  background: var(--glass-bg);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1rem;
+
+
+.active-nav {
+ border-bottom: 2px solid var(--my-gradient);
 }
