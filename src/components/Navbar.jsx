@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-scroll";
 import icon from "../assets/icon.png";
-import { useTheme } from "./ThemeStore";
-import ThemeToggle from "./ThemeToggle";
 import Button from "./Button";
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
-  const { theme } = useTheme(); // Access current theme from context
+  
 
   const links = ["about", "course", "contact"]; // Nav links
 
@@ -32,12 +30,11 @@ const Navbar = () => {
           <Link
             to={link}
             smooth
+            spy={true}
             duration={500}
             offset={-70}
-            onClick={onClick}
-            className="capitalize cursor-pointer transition-all border-b-2 border-transparent hover:border-[var(--color-accent-from)]"
             activeClass="active-nav"
-            spy={true}
+            className="capitalize cursor-pointer transition-all border-b-2 border-transparent hover:border-[var(--color-accent-from)]"
           >
             {link}
           </Link>
@@ -71,8 +68,8 @@ const Navbar = () => {
 
         {/* Desktop navigation */}
         <NavLinks />
-        <ThemeToggle />
-        <Button button_text="Apply Now" className="px-4 py-2"/>
+  
+        <Button button_text="Apply Now" className="px-4 py-2" />
       </div>
 
       {/* Mobile menu dropdown that pushes content down */}

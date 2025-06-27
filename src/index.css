@@ -13,19 +13,7 @@ html {
 }
 
 :root {
-  --color-bg: #ffffff;
-  --color-text: #060707;
-  --color-subtext: #fff;
-  --color-section: #84AE92;
-  --color-accent-from: #71C0BB; /* sky-400 */
-  --color-accent-to: #360cb3;   /* violet-400 */
-  --my-gradient: linear-gradient(90deg, #38bdf8, #a78bfa);
-  --glass-bg: #587774;
-  --site-bg: linear-gradient(180deg, #eef2f3 0%, #e0eafc 100%);
-}
-
-.dark {
-  --color-bg: #0b0c10;
+--color-bg: #0b0c10;
   --color-text: #f9fafb;
   --color-subtext: #9ca3af;
   --color-section: #1f2937;
@@ -37,8 +25,6 @@ html {
 }
 
 
-
-
 .active-nav {
- border-bottom: 2px solid var(--my-gradient);
+  border-bottom: 2px solid var(--color-accent-from);
 }

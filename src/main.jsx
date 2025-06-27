@@ -6,13 +6,19 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css' // ✅ This is your Tailwind CSS file
 import App from './App.jsx' // ✅ Entry component
-import { ThemeProvider } from './components/ThemeStore';
+
+import { BrowserRouter } from "react-router-dom";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-     <ThemeProvider>
+      <BrowserRouter>
+     
         <App />
-     </ThemeProvider>
+ 
+     </BrowserRouter>
   </StrictMode>
 )
+
+
+
 
