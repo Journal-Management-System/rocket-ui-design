@@ -1,12 +1,12 @@
 import React, { PureComponent } from 'react';
-import { RiArrowRightLine } from "react-icons/ri";
+// import { RiArrowRightLine } from "react-icons/ri";
 import { Link } from 'react-router-dom';
 import FadeInSection from './FadeInSection'; // path as per your structure
 
 export class About extends PureComponent {
     render() {
         return (
-            <div className="w-full bg-gradient-to-r from-cyan-500/10 to-purple-500/5 py-16 px-4 sm:px-6 lg:px-8 text-white">
+            <div className="w-full bg-gradient-to-r from-cyan-500/30 to-purple-500/20 backdrop-blur-md py-16 px-4 sm:px-6 lg:px-8 text-white">
                 <div className="max-w-4xl mx-auto space-y-10">
                     <FadeInSection>
                         <p className="text-4xl font-bold leading-tight text-gray-300">
