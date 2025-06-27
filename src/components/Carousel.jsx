@@ -40,7 +40,7 @@ const COURSE_SLIDES = [
     title: "React Native Essentials",
     description: "Create mobile apps using React Native.",
     rating: 4,
-    image: "/images/React Native.jpg",
+    image: "/images/React_Native.jpg",
   },
   {
     title: "Tailwind CSS in Practice",
