@@ -1,15 +1,14 @@
-// REACT + TAILWIND ENTRY POINT
+// src/main.jsx
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
+import './index.css';
 
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './styles/index.css' // ✅ This is your Tailwind CSS file
-import App from './App.jsx' // ✅ Entry component
-
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-)
-
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
+);
