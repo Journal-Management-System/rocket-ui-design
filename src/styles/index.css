@@ -1,3 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @keyframes glow {
+    to {
+      filter: blur(3vmin);
+      transform: scale(1.05);
+    }
+  }
+
+  .animate-glow {
+    animation: glow 3s ease-in-out alternate infinite;
+  }
+}
+
+
+
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
