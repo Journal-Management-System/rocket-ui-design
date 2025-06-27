@@ -6,6 +6,7 @@ import About from '../pages/About';
 import Course from '../pages/Course';
 import Contact from '../pages/Contact';
 
+
 const RootLayout = () => {
   return (
     <div>

@@ -17,8 +17,8 @@ html {
   --color-text: #f9fafb;
   --color-subtext: #9ca3af;
   --color-section: #1f2937;
-  --color-accent-from: #38bdf8;
-  --color-accent-to: #a78bfa;
+  --color-accent-from: #2563eb;
+  --color-accent-to: #9333ea ;
   --my-gradient: linear-gradient(90deg, #38bdf8, #a78bfa);
   --glass-bg: rgba(255, 255, 255, 0.05);
   --site-bg: radial-gradient(circle at center, #0f172a, #000000);
